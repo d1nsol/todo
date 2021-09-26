@@ -9,3 +9,9 @@ app.get(/.*/, function(req, res) {
 app.listen(port);
 
 console.log("server started...");
+
+// heroku sleep 방지
+const http = require('http');
+setInterval(function() {
+  http.get(config.herokuURI);
+}, 600000);
