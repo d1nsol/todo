@@ -8,7 +8,7 @@ app.get(/.*/, function(req, res) {
 });
 app.listen(port);
 
-console.log("server started...");
+console.log("Server started...");
 
 // heroku sleep 방지
 const http = require('http');
